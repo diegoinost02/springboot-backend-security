@@ -24,7 +24,7 @@ public class JpaUserDetailsService implements UserDetailsService { // interface 
 
     @Transactional(readOnly = true)
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException { // login
         
         Optional<User> optionalUser = this.repository.findByUsername(username);
         

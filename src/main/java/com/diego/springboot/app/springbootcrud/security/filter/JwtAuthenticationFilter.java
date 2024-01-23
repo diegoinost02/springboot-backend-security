@@ -89,7 +89,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         Map<String, String> body = new HashMap<>();
         body.put("token", token);
         body.put("username", username);
-        body.put("message", String.format("Inicio de sesion del usuario %s exitosa", username));
+        body.put("message", String.format("Inicio de sesion del usuario %s exitoso", username));
 
         response.getWriter().write(new ObjectMapper().writeValueAsString(body)); // genera el json
         response.setContentType(CONTENT_TYPE); // "application/json"
